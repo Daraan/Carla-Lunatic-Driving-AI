@@ -160,10 +160,10 @@ def get_all_road_lane_ids(world_map):
         road_lane_ids.add(f"{road_id}_{lane_id}")
     
     # Cache value
-    all_road_lane_ids = road_lane_ids
+    all_road_lane_ids = frozenset(road_lane_ids)
     _active_world_name = world_map.name
 
-    return road_lane_ids
+    return all_road_lane_ids
 
 def distance(p1, p2):
     """Define a function to calculate the distance between two points (carla Location objects).
