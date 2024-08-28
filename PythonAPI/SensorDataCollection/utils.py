@@ -3297,7 +3297,8 @@ def update_matrix(
                 entry_highway_road, 
                 exit_highway_road, 
                 right_lane_start_wp, 
-                right_lane_end_wp)
+                right_lane_end_wp,
+                road_lane_ids=road_lane_ids)
             
             if row is None:
                 continue
